@@ -6,7 +6,7 @@ Pokedex_basic is a Flutter application that has basic features of Pokemon Pokede
 
 - View a list of Pokémon names on the home screen.
 - Select a Pokémon from the list to view its details and an image on a separate screen.
-- See the Pokémon's name, height (in centimeters), weight (in kilograms), and an image.
+- See the Pokémon's name, ID, height (in centimeters), weight (in kilograms), and an image.
 
 ## API
 https://pokeapi.co/api/v2/pokemon/?limit=10
@@ -33,4 +33,4 @@ The Pokémon Pokedex app is structured into three primary Dart files:
 - Houses the `PokemonDetail` widget, representing the detail screen for a selected Pokémon.
 - Fetches and displays details, including an image, for the selected Pokémon from the PokeAPI
 - Utilizes an `AppBar` for showing the selected Pokemon's name with a back button.
-- Displays an image of the Pokémon along with its height, and weight.
+- Displays an image of the Pokémon along with its ID,height, and weight.
