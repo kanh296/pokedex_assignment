@@ -7,7 +7,7 @@ class PokemonList extends StatefulWidget {
   const PokemonList({super.key});
 
   @override
-  _PokemonListState createState() => _PokemonListState();
+  State<PokemonList> createState() => _PokemonListState();
 }
 
 class _PokemonListState extends State<PokemonList> {
