@@ -13,6 +13,7 @@ class PokemonDetail extends StatefulWidget {
 
 class _PokemonDetailState extends State<PokemonDetail> {
   Map<String, dynamic> pokemonData = {};
+  int? pokemonID;
 
   @override
   void initState() {
@@ -25,8 +26,10 @@ class _PokemonDetailState extends State<PokemonDetail> {
 
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
+      final id = data['id'];
       setState(() {
         pokemonData = data;
+        pokemonID = id;
       });
     } else {
       throw Exception('Failed to load Pokemon data');
@@ -57,8 +60,14 @@ class _PokemonDetailState extends State<PokemonDetail> {
               Image.network(
                 imageUrl,
                 height: 350,
-                width: 3500,
+                width: 350,
               ),
+            Text('ID: ${pokemonID ?? ''}',
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+              ),
+            ),
             Text('Height: $height',
                 style: const TextStyle(
                   fontSize: 18,
